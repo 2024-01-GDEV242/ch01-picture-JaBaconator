@@ -16,6 +16,9 @@ public class Circle
     private String color;
     private boolean isVisible;
     
+    public int curXPosition;
+    public int curYPosition;
+    
     /**
      * Create a new circle at default position with default color.
      */
@@ -187,5 +190,17 @@ public class Circle
             Canvas canvas = Canvas.getCanvas();
             canvas.erase(this);
         }
+    }
+    public void center()
+    {
+        curXPosition = xPosition;
+        curYPosition = yPosition;
+        
+        xPosition = 400;
+        yPosition = 250;
+        draw();
+        xPosition = curXPosition;
+        yPosition = curYPosition;
+        
     }
 }

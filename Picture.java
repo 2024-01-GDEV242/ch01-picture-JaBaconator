@@ -42,15 +42,22 @@ public class Picture
     {
         if(!drawn) {
             mast.makeVisible();
+            mast.center();
+            
             
             ocean.makeVisible();
+            ocean.center();
             
             boat.makeVisible();
             halfboat.makeVisible();
+            boat.center();
+            halfboat.center();
             
             flag.makeVisible();
+            flag.center();
             
             human.makeVisible();
+            human.center();
             
             drawn = true;
         }

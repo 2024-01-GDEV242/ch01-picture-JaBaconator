@@ -15,7 +15,9 @@ public class Triangle
     private int yPosition;
     private String color;
     private boolean isVisible;
-
+    
+    public int curXPosition;
+    public int curYPosition;
     /**
      * Create a new triangle at default position with default color.
      */
@@ -191,5 +193,17 @@ public class Triangle
             Canvas canvas = Canvas.getCanvas();
             canvas.erase(this);
         }
+    }
+    public void center()
+    {
+        curXPosition = xPosition;
+        curYPosition = yPosition;
+        
+        xPosition = 400;
+        yPosition = 250;
+        draw();
+        xPosition = curXPosition;
+        yPosition = curYPosition;
+        
     }
 }
